@@ -1,14 +1,13 @@
 ﻿namespace MusicWebApp1.Models
 {
-    public class Artist
+    public sealed class Artist
     {
-        public Artist()
-        {
-            ArtistSong = new List<ArtistSong>();
-        }
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string? Description { get; set; }
-        public virtual ICollection<ArtistSong> ArtistSongs { get; set; }
+
+        public string FirstName { get; set; } = null!;
+        public string LastName { get; set; } = null!;
+
+        public IEnumerable<Song> Songs { get; set; } = new List<Song>();
+        public IEnumerable<ArtistSong> ArtistSongs { get; set; } = new List<ArtistSong>();
     }
 }
