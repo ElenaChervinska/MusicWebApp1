@@ -11,7 +11,6 @@ namespace MusicWebApp1.Models
 
         public MusicApiContext(DbContextOptions<MusicApiContext> options) : base(options)
         {
-            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
